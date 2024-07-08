@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitter Profile</title>
+    <style>
+        .sitter-profile {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin: 16px;
+            text-align: center;
+        }
+        .appoint-button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .appoint-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="sitter-profile">
+        <img src="https://via.placeholder.com/100?text=<%= name %>" alt="Pet Sitter <%= name %>" />
+        <h2>Pet Sitter <%= name %></h2>
+        <p>Name: <%= name %></p>
+        <p>Age: <%= age %></p>
+        <p>Years of Experience: <%= experience %></p>
+        <button class="appoint-button" onclick="appointSitter('<%= name %>')">Appoint</button>
+    </div>
+
+    <script>
+        function appointSitter(sitterName) {
+            var time = prompt("Enter preferred pet sitting time (HH:MM AM/PM):");
+            var distance = prompt("Enter preferred walk distance (in miles):");
+
+            if (time && distance) {
+                console.log('Sitter:', sitterName, 'Time:', time, 'Distance:', distance);
+                // Add logic to handle the appointment (e.g., send data to backend)
+            }
+        }
+    </script>
+</body>
+</html>

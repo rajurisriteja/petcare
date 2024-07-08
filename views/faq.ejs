@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .faq h2 {
+            cursor: pointer;
+        }
+
+        .faq p {
+            display: none;
+            margin: 0;
+            padding: 0 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+
+    <div class="faq">
+        <h2>What services do you offer?</h2>
+        <p>We offer a variety of pet grooming services including shampoo and blow dry, paw cleaning, oral care, and fur cutting.</p>
+    </div>
+    <div class="faq">
+        <h2>How can I book an appointment?</h2>
+        <p>You can book an appointment directly from our website by clicking the "Book Appointment" button next to the desired service.</p>
+    </div>
+    <div class="faq">
+        <h2>What are your working hours?</h2>
+        <p>Our working hours are from 9:00 AM to 6:00 PM, Monday to Saturday.</p>
+    </div>
+
+    <script>
+        // Add event listeners to toggle content visibility
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqHeaders = document.querySelectorAll('.faq h2');
+            faqHeaders.forEach(item => {
+                item.addEventListener('click', function () {
+                    const content = item.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

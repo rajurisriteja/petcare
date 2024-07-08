@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Dog Walk</title>
+    <style>
+        /* Define your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #9dc1e1;
+            background-image: url('https://lordicon.com/icons/wired/flat/647-walking-with-dog.gif');
+            background-repeat: no-repeat;
+            width: 100%;
+            background-size: 500px 820px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #cfdbe4;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Track Dog Walk</h1>
+        <form id="track-form" method="post" action="/track-dog-walk">
+            <div class="form-group">
+                <label for="time">Time (minutes):</label>
+                <input type="number" id="time" name="time" value="<%= time %>" required>
+            </div>
+            <div class="form-group">
+                <label for="distance">Distance (miles):</label>
+                <input type="number" id="distance" name="distance" value="<%= distance %>" required>
+            </div>
+            <button type="submit">Track</button>
+        </form>
+        <div id="result">
+            < if (result) { >
+                <p><= result %></p>
+            < } x>
+        </div>
+    </div>
+</body>
+</html>

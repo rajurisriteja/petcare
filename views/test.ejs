@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyPets</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <div class="App">
+        <header>
+            <img src="https://thumbs.dreamstime.com/b/pet-sitter-29050298.jpg" alt="Pet Care Services" class="logo" />
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+                <a href="./log.html" target="_blank" class="login-button">Login</a>
+            </nav>
+        </header>
+        <div class="hero">
+            <h2>WELCOME TO OnlyPets! <br />Your Furry friends deserve the best</h2>
+            <p>Want to take your dog on a walk or for a groom, but you're too busy? <br />Don't worry, We got you!</p>
+        </div>
+
+        <div id="services" class="services">
+            <h2>OUR SERVICES</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <img src="https://t4.ftcdn.net/jpg/00/75/35/67/360_F_75356769_saJ9kiQRVuWgLEcXyQKeVJwNb1YAE92w.jpg" alt="Veterinary Care" />
+                    <button><a href="vet.html"><b>Veterinary Care</b></a></button>
+                    <p>Professional veterinary care to ensure your pet's health and well-being.</p>
+                    <div class="rating" data-rating="4"></div> <!-- Example usage of rating -->
+                </div>
+                <!-- Add other service entries here -->
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <h2>Testimonial</h2>
+            <div id="testimonials" class="testimonial">
+                <h2>What Our Customers Say</h2>
+                <!-- Testimonial items -->
+            </div>
+        </div>
+
+        <div id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to schedule an appointment? Fill out the form below:</p>
+            <!-- Contact form -->
+            <p>If you have any questions, feel free to contact us!</p>
+            <button class="faq-button"><a href="./faq.html" target="_blank">FAQs</a></button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const ratings = document.querySelectorAll('.rating');
+
+            ratings.forEach(rating => {
+                const ratingValue = parseInt(rating.dataset.rating);
+                for (let i = 0; i < 5; i++) {
+                    const star = document.createElement('span');
+                    star.innerHTML = '&#9733;'; // Unicode for star character
+                    if (i < ratingValue) {
+                        star.classList.add('rated');
+                    }
+                    rating.appendChild(star);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyPets</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+<body>
+    <div class="App">
+        <header>
+            <img src="https://thumbs.dreamstime.com/b/pet-sitter-29050298.jpg" alt="Pet Care Services" class="logo" />
+            <nav>
+                <a href="#services">Services</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#contact">Contact</a>
+                <a href="./log.html" target="_blank" class="login-button">Login</a>
+            </nav>
+        </header>
+        <div class="hero">
+            <h2>WELCOME TO OnlyPets! <br />Your Furry friends deserve the best</h2>
+            <p>Want to take your dog on a walk or for a groom, but you're too busy? <br />Don't worry, We got you!</p>
+        </div>
+
+        <div id="services" class="services">
+            <h2>OUR SERVICES</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <img src="https://t4.ftcdn.net/jpg/00/75/35/67/360_F_75356769_saJ9kiQRVuWgLEcXyQKeVJwNb1YAE92w.jpg" alt="Veterinary Care" />
+                    <button><a href="vet.html"><b>Veterinary Care</b></a></button>
+                    <p>Professional veterinary care to ensure your pet's health and well-being.</p>
+                </div>
+                <div class="service">
+                    <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/petgrooming1.jpg" alt="Grooming" />
+                    <button><a href="../pet-grooming/public/groom.html"><b>Grooming</b></a></button>
+                    <p>Keep your pet looking and feeling their best with our grooming services.</p>
+                </div>
+                <div class="service">
+                    <img src="https://www.shutterstock.com/shutterstock/photos/1874227798/display_1500/stock-vector-professional-dog-handler-walks-with-pet-in-park-concept-of-dog-walking-service-volunteering-1874227798.jpg" alt="Walking" />
+                    <button><a href="walk.html"><b>Walking</b></a></button>
+                    <p>From tail wags to happy trails, We've got your pet's walk covered.</p>
+                </div>
+                <div class="service">
+                    <img src="https://img.freepik.com/free-vector/dog-owner-brushing-fur-domestic-animal-happy-pet-sitting-male-character-smiling-holding-brush-flat-illustration_74855-18739.jpg" alt="Pet Sitting" />
+                    <button><a href="sit.html"><b>Pet Sitting</b></a></button>
+                    <p>Providing love and care when you can't be there.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <h2>Testimonial</h2>
+            <div id="testimonials" class="testimonial">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonial-item">
+                    <div class="rating">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                    </div>
+                    <p>"I'm so grateful for the care my pet received by the pet sitter from OnlyPets. The staff went above and beyond to ensure my pet's comfort."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="rating">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                    </div>
+                    <p>"My dog always looks forward to visiting Pet Care Services. The staff is friendly and the facilities are top-notch."</p>
+                </div>
+                <div class="testimonial-item">
+                    <div class="rating">
+                        <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
+                    </div>
+                    <p>"I highly recommend OnlyPets Services to all pet owners. They truly care about the well-being of every animal."</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to schedule an appointment? Fill out the form below:</p>
+            <form action="#" method="post">
+                <label for="name">Name:</label><br />
+                <input type="text" id="name" name="name" required /><br />
+                <label for="email">Email:</label><br />
+                <input type="text" id="email" name="email" required /><br />
+                <label for="message">Message:</label><br />
+                <textarea id="message" name="message" rows="4" required></textarea><br />
+                <input type="submit" value="Submit" />
+            </form>
+            <p>If you have any questions, feel free to contact us!</p>
+            <button class="faq-button"><a href="./faq.html" target="_blank">FAQs</a></button>
+        </div>
+    </div>
+</body>
+</html>
